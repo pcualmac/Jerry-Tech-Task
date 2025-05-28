@@ -10,11 +10,24 @@ class WebBookController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request) // Inject Request here
     {
-        $books = Book::all();
+        // Start with all books
+        $books = Book::query();
+
+        // Check if a 'search' query parameter is present in the request
+        if ($request->has('search') && $request->input('search') != '') {
+            $searchTerm = $request->input('search');
+            // Filter books where the title contains the search term (case-insensitive)
+            $books->where('title', 'like', '%' . $searchTerm . '%');
+        }
+
+        // Get the filtered (or all) books
+        $books = $books->get();
+
         return view('index', ['books' => $books]);
     }
+
 
     /**
      * Show the form for creating a new resource.
