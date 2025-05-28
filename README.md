@@ -51,8 +51,8 @@ Designs
 ## ✅ Tasks to Complete
 
 ### 🔧 Landing Page Redesign + Search <!-- branch: feature/landing-search -->
-- [ ] **[landing-ui]** Update the landing page UI to match the design in `book-shop-listing.png`.
-- [ ] **[search-books]** Add search functionality to filter books by title.
+- ✅ **[landing-ui]** Update the landing page UI to match the design in `book-shop-listing.png`.
+- ✅ **[search-books]** Add search functionality to filter books by title.
 
 ### 🐞 Fix Book Update Issue <!-- branch: bugfix/book-update -->
 - [ ] **[fix-book-update]** Investigate and resolve the problem preventing books from being updated.
