@@ -3,7 +3,17 @@
 @section('content')
     <div class="row mb-3 search-bar">
         <div class="col-md-4 offset-md-8">
-            <input type="text" class="form-control" placeholder="Search by book title ...">
+            {{-- Add a form for the search functionality --}}
+            <form action="{{ route('books.index') }}" method="GET" class="d-flex">
+                <input
+                    type="text"
+                    class="form-control me-2"
+                    placeholder="Search by book title ..."
+                    name="search" {{-- Add the name attribute --}}
+                    value="{{ request('search') }}" {{-- Retain the search value --}}
+                >
+                <button type="submit" class="btn btn-secondary">Search</button> {{-- Add a search button --}}
+            </form>
         </div>
     </div>
 
@@ -31,8 +41,8 @@
                                 <form action="#" method="POST" style="display:inline-block;">
                                     @csrf
                                     @method('DELETE')
-                                    {{-- Changed button to a link-like appearance --}}
-                                    <button type="submit" class="action-link-button">Delete</button>
+                                    {{-- Now the Delete button will also use the generic action-link style --}}
+                                    <button type="submit" class="action-link">Delete</button>
                                 </form>
                             </td>
                         </tr>
