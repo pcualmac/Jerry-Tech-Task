@@ -39,33 +39,25 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Custom styles for the action links */
+        /* Custom CSS to remove button styling and make them underlined text */
+        /* This class will now apply to both Edit and Delete actions */
         .action-link {
-            color: inherit; /* Inherit text color from parent (usually black) */
-            text-decoration: underline; /* Add underline */
-            margin-right: 10px; /* Space between Edit and Delete */
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            text-decoration: underline; /* This adds the underscore */
+            color: blue; /* Default link color for both Edit and Delete */
+            font-size: inherit; /* Inherit font size from parent */
+            font-family: inherit; /* Inherit font family from parent */
         }
-
         .action-link:hover {
-            color: #0056b3; /* A common hover color for links */
-            text-decoration: underline;
+            color: darkblue; /* Change color on hover for both */
         }
 
-        .action-link-button {
-            background: none; /* Remove background color */
-            border: none; /* Remove border */
-            padding: 0; /* Remove padding */
-            font: inherit; /* Inherit font styles from parent */
-            cursor: pointer; /* Indicate it's clickable */
-            color: inherit; /* Inherit text color from parent */
-            text-decoration: underline; /* Add underline */
-            display: inline; /* Keep it inline with the form */
-        }
-
-        .action-link-button:hover {
-            color: #dc3545; /* A common hover color for delete-like actions */
-            text-decoration: underline;
-        }
+        /* The .delete-link class is no longer needed if it's styled the same as .action-link */
+        /* You can remove these specific styles if you want them to be identical. */
+        /* If you wanted a slight variation (e.g., still slightly different hover), you could keep it */
     </style>
 </head>
 <body>
