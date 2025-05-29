@@ -36,14 +36,13 @@
                             <td>{{ $book->author }}</td>
                             <td>{{ $book->rating }}</td>
                             <td>
-                                {{-- Changed to simple anchor tags for underlining --}}
-                                <a href="#" class="action-link">Edit</a>
-                                <form action="#" method="POST" style="display:inline-block;">
+                                {{-- Updated the Edit link to point to the dynamic route --}}
+                                <a href="{{ route('books.edit', $book->id) }}" class="action-link">Edit</a>
+                                <form action="{{ route('books.destroy', $book->id) }}" method="POST" style="display:inline-block;">
                                     @csrf
                                     @method('DELETE')
-                                    {{-- Now the Delete button will also use the generic action-link style --}}
-                                    <button type="submit" class="action-link">Delete</button>
-                                </form>
+                                    <button type="submit" class="action-link" onclick="return confirm('Are you sure?')">Delete</button>
+                                </form> 
                             </td>
                         </tr>
                     @endforeach
