@@ -13,15 +13,18 @@
             background-color: #343a40; /* Dark gray for the header */
             color: white;
             padding: 1rem 0;
-            text-align: center;
+            text-align: center; /* Ensures content inside navbar is centered */
         }
         .navbar h1 {
-            color: white;
+            color: red;
             margin-bottom: 0.5rem;
+            text-align: center !important; /* Add !important to override any Bootstrap styles */
+            width: 100%; /* Ensure it takes full width */
         }
         .navbar p {
             color: #ccc;
             font-size: 0.9rem;
+            text-align: center; /* Explicitly centered */
         }
         .container {
             padding-top: 2rem;
