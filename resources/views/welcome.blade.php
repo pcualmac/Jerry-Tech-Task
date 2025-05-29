@@ -6,7 +6,7 @@
     </head>
     <body>
         <div id="app">
-            <h1>Welcome to the Full Stack Tech Test!</h1>
+            <Header /> 
             <book-listing></book-listing>
         </div>
 
